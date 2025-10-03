@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-ag" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aqua-Quest: Guardians of the Deep</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+              handwriting: ['Kalam', 'cursive'],
+            },
+            colors: {
+              'ocean-deep': '#001a3d',
+              'ocean-light': '#003d5c',
+              'coral': '#ff6b6b',
+              'sand': '#f4a261',
+              'seafoam': '#2ec4b6',
+            },
+            keyframes: {
+              'float': {
+                '0%, 100%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              'bubble': {
+                '0%': { transform: 'translateY(0) scale(1)', opacity: '1' },
+                '100%': { transform: 'translateY(-100px) scale(1.5)', opacity: '0' },
+              }
+            },
+            animation: {
+              'float': 'float 3s ease-in-out infinite',
+              'bubble': 'bubble 1s ease-in-out infinite',
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.21.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-ocean-deep font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
